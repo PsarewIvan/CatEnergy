@@ -39,7 +39,7 @@ function scripts() {
 }
 
 function clean() {
-  return del(['build/*']);
+  return del(['build/*', '!build/img']);
 }
 
 function watch() {
