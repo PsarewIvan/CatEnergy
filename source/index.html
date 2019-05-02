@@ -3,40 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Cat Energy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/main-min.css">
 </head>
 <body>
   <header class="header">
-    <a class="header__main-lik">
-      <span class="visually-hidden">Главная</span>
-      <picture>
-        <source srcset="" media="()">
-        <source srcset="" media="()">
-        <img class="header__logo" src="" alt="" width="" height="">
-      </picture>
-      <picture>
-        <source srcset="" media="()">
-        <source srcset="" media="()">
-        <img class="header__logo-text" src="" alt="" width="" height="">
-      </picture>
-    </a>
-    <button class="header__nav-btn" type="button">
-      <span class="visually-hidden">Меню навигации</span>
-    </button>
-    <nav class="header__nav">
-      <ul class="header__nav-list">
-        <li class="header__nav-li">
-          <a class="header__nav-link">Главная</a>
-        </li>
-        <li class="header__nav-li">
-          <a href="catalog.html" class="header__nav-link">Каталог продукции</a>
-        </li>
-        <li class="header__nav-li">
-          <a href="form.html" class="header__nav-link">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header__wrapper wrapper">
+      <a class="header__main-link">
+        <span class="visually-hidden">Главная</span>
+        <picture>
+          <!-- <source srcset="" media="()"> -->
+          <!-- <source srcset="" media="()"> -->
+          <img class="header__logo-icon" src="img/icon/logo.svg" alt="Cat Energy Logo" width="34">
+        </picture>
+        <picture>
+          <!-- <source srcset="" media="()"> -->
+          <!-- <source srcset="" media="()"> -->
+          <img class="header__logo-text" src="img/icon/logo-text.svg" alt="Cat Energy" width="100">
+        </picture>
+      </a>
+      <button class="header__nav-btn header__nav-btn--close js--header__nav-btn" type="button">
+        <span class="visually-hidden">Меню навигации</span>
+      </button>
+    </div>
+    <div class="header__nav-wrapper">
+      <nav class="header__nav main-nav js--main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__li">
+            <a class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__li">
+            <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
+          </li>
+          <li class="main-nav__li">
+            <a href="form.html" class="main-nav__link">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
     <h1 class="main__headlines">Функциональное питание для котов</h1>
