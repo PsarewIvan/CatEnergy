@@ -1,0 +1,90 @@
+.footer {
+  padding: 40px 0 0;
+  background-color: @background;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 @mobile-padding;
+}
+
+.footer__main-link {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.footer__social {
+  padding: 2px 0;
+
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+
+  &:hover svg,
+  &:focus svg {
+    fill: @main-color;
+  }
+
+  &:active svg {
+    fill: @main-color;
+    opacity: 0.3;
+  }
+}
+
+.footer__social-link--vkontante svg {
+  width: 22px;
+}
+
+.footer__social-link--instagram svg {
+  width: 16px;
+}
+
+.footer__social-link--facebook svg {
+  width: 10px;
+}
+
+.footer__academy-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  padding: 20px 0;
+  margin: 0 auto;
+
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  color: @font-main;
+
+  &:hover .footer__academy-icon,
+  &:focus .footer__academy-icon {
+    fill: @main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__academy-icon {
+  width: 27px;
+  height: 34px;
+}
