@@ -1,0 +1,130 @@
+.example {
+  background-color: @background;
+}
+
+.example__headline {
+  padding: 0 @mobile-padding;
+  margin: 0 0 20px;
+}
+
+.example__block--first-block {
+  padding: 0 @mobile-padding;
+}
+
+.example__descr {
+  margin: 0 0 25px;
+}
+
+.example__numbers-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+.example__numbers {
+  position: relative;
+
+  width: 125px;
+  min-height: 55px;
+  box-sizing: border-box;
+  margin: 0;
+
+  font-size: 24px;
+  line-height:55px;
+  font-family: @oswald;
+  text-align: center;
+  text-transform: uppercase;
+  color: #111;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+.example__numbers-footnote {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+
+  width: 87px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  line-height: 12px;
+  font-family: @arial;
+  text-align: center;
+  text-transform: none;
+  color: @font-main;
+
+  background-color: @background;
+}
+
+.example__price-block {
+  margin: 0 0 40px;
+
+  line-height: 20px;
+  font-family: @oswald;
+  text-align: center;
+  text-transform: uppercase;
+  color: @font-headlines;
+}
+
+.example__img-wrapper {
+  margin: 0 auto 35px;
+}
+
+.example__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.example__switch-block {
+  display: flex;
+  justify-content: center;
+}
+
+.example__switch-btn {
+  min-width: 75px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: @oswald;
+  text-transform: uppercase;
+  color: @font-headlines;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.example__switch {
+  position: relative;
+
+  width: 85px;
+  height: 16px;
+  box-sizing: border-box;
+  align-self: center;
+
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    display: block;
+    width: 35px;
+    height: 6px;
+
+    background-color: @main-color;
+    border-radius: 3px;
+  }
+}

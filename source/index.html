@@ -85,11 +85,11 @@
     </section>
     <section class="main__example example">
       <h2 class="example__headline">Живой пример</h2>
-      <div class="example__block">
+      <div class="example__block  example__block--first-block">
         <p class="example__descr">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <div class="example__numbers-wrapper">
-          <p class="example__numbers"><span class="example__numbers-footnote">снижение  веса</span>5 кг</p>
-          <p class="example__numbers"><span class="example__numbers-footnote">затрачено  времени</span>60 дней</p>
+          <p class="example__numbers"><span class="example__numbers-footnote">снижение<br>веса</span>5 кг</p>
+          <p class="example__numbers"><span class="example__numbers-footnote">затрачено<br>времени</span>60 дней</p>
         </div>
         <p class="example__price-block">
           <span class="example__price-text">Затраты на питание:</span>
@@ -97,18 +97,20 @@
         </p>
       </div>
       <div class="example__block">
-        <picture>
-          <source>
-          <img class="example__img example__img--fat" src="" alt="Толстый кот" width="280">
-        </picture>
-        <picture>
-          <source>
-          <img class="example__img example__img--ершт" src="" alt="Худой кот" width="280">
-        </picture>
+        <div class="example__img-wrapper">
+          <picture>
+            <!-- <source> -->
+            <img class="example__img" src="../img/picture/before-mobile.png" alt="Толстый кот" width="320">
+          </picture>
+          <picture class="display-none">
+            <!-- <source> -->
+            <img class="example__img" src="../img/picture/after-mobile.png" alt="Худой кот" width="320">
+          </picture>
+        </div>
         <div class="example__switch-block">
+          <button class="example__switch-btn" type="button">Было</button>
           <div class="example__switch"></div>
-          <button class="example__switch-btn example__switch-btn--before" type="button">Было</button>
-          <button class="example__switch-btn example__switch-btn--after" type="button">Стало</button>
+          <button class="example__switch-btn" type="button">Стало</button>
         </div>
       </div>
     </section>
