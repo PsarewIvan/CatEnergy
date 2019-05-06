@@ -8,7 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 @mobile-padding;
+  margin: 0 @mobile-padding;
 }
 
 .header__main-link {
@@ -31,10 +31,12 @@
 .header__nav-btn {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -@mobile-padding;
 
+  display: block;
   width: 65px;
   height: 65px;
+  padding: 0;
 
   background-color: transparent;
   background-image: url(../img/icon/burger.svg);
@@ -51,3 +53,9 @@
 .header__nav {
   width: 100%;
 }
+
+// @media (min-width: 748px) {
+//   .header__wrapper {
+//     width: 708px;
+//   }
+// }

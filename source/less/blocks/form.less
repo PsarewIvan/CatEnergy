@@ -1,7 +1,12 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__first-block,
 .form__program-block {
-  padding: 20px @mobile-padding 23px;
-  margin: 0;
+  padding: 0;
+  margin: 20px 0 23px;
 
   border: none;
   border-bottom: 1px solid #ededed;
@@ -17,13 +22,11 @@
 }
 
 .form__submit-wrapper {
-  padding: 0 @mobile-padding;
-  margin-bottom: 20px;
+  margin: 0 @mobile-padding 20px;
 }
 
 .form__footnote {
-  padding: 0 @mobile-padding;
-  margin: 0;
+  margin: 0 @mobile-padding;
 
   line-height: 16px;
   text-align: center;
@@ -34,9 +37,13 @@
 .form__contact-list,
 .form__additionally-list {
   padding: 0;
-  margin: 0;
+  margin: 0 @mobile-padding;
 
   list-style: none;
+}
+
+.form__contact-list {
+  margin: 0 @mobile-padding;
 }
 
 .form__program-list {
@@ -174,7 +181,7 @@
   position: relative;
 
   display: flex;
-  margin: 0 @mobile-padding 15px;
+  margin: 0 0 15px;
 
   &:last-child {
     margin-bottom: 0;
@@ -214,7 +221,7 @@
 }
 
 .form__textarea-wrapper {
-  padding: 0 @mobile-padding;
+  margin: 0 @mobile-padding;
 }
 
 .form__input--textarea {
@@ -225,7 +232,7 @@
 .form__additionally-list {
   display: flex;
   flex-direction: column;
-  padding: 0 @mobile-padding 40px;
+  padding-bottom: 40px;
 }
 
 .form__additionally-li {
