@@ -18,6 +18,16 @@
   padding: 11px 0;
 }
 
+.header__main-link--active {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .header__logo-text {
   position: absolute;
   left: 0;
@@ -44,6 +54,8 @@
   background-repeat: no-repeat;
   background-size: 25px 25px;
   border: none;
+  
+  cursor: pointer;
 }
 
 .header__nav-btn--close{

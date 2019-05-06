@@ -26,4 +26,18 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @font-main-navigation;
+
+  &:hover:not(.main-nav__link--active) {
+    opacity: 0.6;
+  }
+
+  &:active:not(.main-nav__link--active) {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__link--active .main-nav__link-span {
+  padding-bottom: 5px;
+
+  border-bottom: 2px solid @main-color;
 }

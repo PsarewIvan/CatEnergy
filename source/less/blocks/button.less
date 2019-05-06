@@ -11,9 +11,18 @@
   text-transform: uppercase;
   color: #fff;
 
-  background-color: @button-background;
+  background-color: @main-color;
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @main-color--hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--promo {
