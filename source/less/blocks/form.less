@@ -1,0 +1,279 @@
+.form__first-block,
+.form__program-block {
+  padding: 20px @mobile-padding 23px;
+  margin: 0;
+
+  border: none;
+  border-bottom: 1px solid #ededed;
+}
+
+.form__contact-block,
+.form__comment-block,
+.form__additionally-block {
+  padding: 0;
+  margin: 30px 0 0;
+
+  border: none;
+}
+
+.form__submit-wrapper {
+  padding: 0 @mobile-padding;
+  margin-bottom: 20px;
+}
+
+.form__footnote {
+  padding: 0 @mobile-padding;
+  margin: 0;
+
+  line-height: 16px;
+  text-align: center;
+}
+
+.form__first-block-list,
+.form__program-list,
+.form__contact-list,
+.form__additionally-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.form__program-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__program-li {
+  margin: 0 0 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__first-block-li {
+  display: flex;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 13px 15px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @oswald;
+  text-transform: uppercase;
+  color: @font-main;
+
+  border: 1px solid #e6e6e6;
+  outline: none;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    padding: 12px 14px;
+
+    border: 2px solid #444444;
+  }
+}
+
+.form__label {
+  align-self: center;
+  margin-right: 15px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @oswald;
+  text-transform: uppercase;
+  color: @font-form;
+}
+
+.form__label--program {
+  position: relative;
+
+  padding-left: 45px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+
+    display: block;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+  }
+
+  &:hover::after {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__input--program:focus + .form__label--program::after {
+  border: 2px solid #444;
+}
+
+.form__input--program:checked + .form__label--program::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 9px;
+
+  display: block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+
+  background-color: @main-color;
+  border-radius: 50%;
+}
+
+.form__legend {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  margin: 0 0 30px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: @oswald;
+  color: @font-headlines;
+
+  background-image: linear-gradient(to bottom, transparent 0, transparent 14px, @main-color 14px, @main-color 17px, transparent 17px, transparent 100%);
+}
+
+.form__legend-span {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 230px;
+  padding: 0 @mobile-padding;
+
+  background-color: #fff;
+}
+
+.form__contact-li {
+  position: relative;
+
+  display: flex;
+  margin: 0 @mobile-padding 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__contact-icon {
+  position: absolute;
+  right: 20px;
+
+  display: block;
+}
+
+.form__contact-icon--phone {
+  top: 12px;
+  right: 17px;
+
+  width: 20px;
+}
+
+.form__contact-icon--email {
+  top: 15px;
+
+  width: 18px;
+}
+
+.form__input--email,
+.form__input--tel {
+  padding-right: 50px;
+  z-index: 10;
+
+  background-color: transparent;
+
+  &:focus + .form__contact-icon svg {
+    fill: @main-color;
+  }
+}
+
+.form__textarea-wrapper {
+  padding: 0 @mobile-padding;
+}
+
+.form__input--textarea {
+  width: 100%;
+  min-height: 150px;
+}
+
+.form__additionally-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 @mobile-padding 40px;
+}
+
+.form__additionally-li {
+  align-self: flex-start;
+  margin: 0 0 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__label--additionally {
+  position: relative;
+
+  padding-left: 45px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    display: block;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cfcfcf;
+  }
+
+  &:hover::after {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__input--additionall:checked + .form__label--additionally::after {
+  background-image: url("../img/icon/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 21px;
+}
+
+.form__input--additionall:focus + .form__label--additionally::after {
+  padding: 12px 14px;
+
+  border: 2px solid #444444;
+}
