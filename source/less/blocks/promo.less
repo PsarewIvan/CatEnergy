@@ -14,12 +14,12 @@
                         top center;
 }
 
-.promo_wrapper {
+.promo__wrapper {
   margin: 0 @mobile-padding;
 }
 
 .promo__headlines {
-  margin: 0;
+  margin: 0 0 18px;
 
   font-size: 36px;
   line-height: 36px;
@@ -28,7 +28,7 @@
 }
 
 .promo__descr {
-  margin: 18px 0 0 0;
+  margin: 0;
 
   font-size: 14px;
   line-height: 14px;
@@ -45,4 +45,45 @@
   right: 0;
 
   margin: 0 @mobile-padding;
+}
+
+@media (min-width: @tablet) {
+  .promo {
+    min-height: 810px;
+
+    background: url('../img/picture/chiken-background-tablet.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .promo__wrapper {
+    padding-left: 90px;
+    margin: 0 @tablet-padding;
+  }
+
+  .promo__headlines {
+    margin-bottom: 40px;
+
+    width: 427px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @font-headlines;
+  }
+
+  .promo__descr {
+    margin-bottom: 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: @font-headlines;
+  }
+
+  .promo__btn-wrapper {
+    position: static;
+
+    width: 245px;
+    margin: 0;
+  }
 }
