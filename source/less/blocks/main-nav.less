@@ -41,3 +41,29 @@
 
   border-bottom: 2px solid @main-color;
 }
+
+@media (min-width: @tablet) {
+  .main-nav__list {
+    flex-direction: row;
+    margin-top: 42px;
+  }
+
+  .main-nav__link {
+    margin: 0;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    color: @font-navigation-tablet;
+  }
+
+  .main-nav__li {
+    min-height: 35px;
+    margin-left: 35px;
+
+    border: none;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
