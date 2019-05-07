@@ -39,7 +39,7 @@ function scripts() {
 }
 
 function clean() {
-  return del(['build/*', '!build/img']);
+  return del(['build/*', '!build/img', '!build/fonts']);
 }
 
 function watch() {
