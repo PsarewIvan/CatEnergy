@@ -137,3 +137,44 @@
     }
   }
 }
+
+@media (min-width: @desctop) {
+  .cat-block {
+    padding: 80px 50px 65px;
+  }
+
+  .cat-block__headline {
+    margin: 0 0 75px 165px;
+
+    &::before {
+      top: 47px;
+      left: 50px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .cat-block__headline--thin::after {
+    top: -6px;
+    left: 65px;
+
+    width: 70px;
+  }
+
+  .cat-block__headline--strong::after {
+    top: 0;
+    left: 34px;
+
+    width: 130px;
+  }
+
+  .cat-block__descr {
+    margin: 0 0 30px;
+  }
+
+  .cat-block__link {
+    width: 190px;
+    padding: 0;
+  }
+}
