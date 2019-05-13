@@ -49,7 +49,7 @@
   }
 }
 
-.footer__social-link--vkontante svg {
+.footer__social-link--vkontakte svg {
   width: 22px;
 }
 
@@ -87,4 +87,59 @@
 .footer__academy-icon {
   width: 27px;
   height: 34px;
+}
+
+@media (min-width: @tablet) {
+  .footer {
+    padding: 60px 0 55px;
+  }
+
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 @tablet-padding;
+  }
+
+  .footer__main-link {
+    width: 192px;
+    margin: 0;
+
+    text-align: left;
+  }
+
+  .footer__social {
+    width: 324px;
+
+    border: none;
+  }
+
+  .footer__academy-link {
+    width: 192px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer__social-link {
+    height: 30px;
+
+    &--vkontakte svg {
+      width: 30px;
+    }
+
+    &--instagram svg {
+      width: 23px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+    }
+  }
+
+  .footer__academy-link {
+    justify-content: flex-end;
+  }
+
+  .footer__academy-text {
+    margin-right: 23px;
+  }
 }
