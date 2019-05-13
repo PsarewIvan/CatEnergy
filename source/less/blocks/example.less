@@ -1,4 +1,5 @@
 .example {
+  padding: 15px 0 35px;
   background-color: @background;
 }
 
@@ -18,41 +19,40 @@
   display: flex;
   justify-content: space-between;
   max-width: 400px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
 
 .example__numbers {
-  position: relative;
-
+  display: flex;
+  flex-direction: column;
   width: 125px;
-  min-height: 55px;
   box-sizing: border-box;
   margin: 0;
 
   font-size: 24px;
-  line-height:55px;
+  line-height:24px;
   font-family: @oswald;
   text-align: center;
   text-transform: uppercase;
   color: #111;
+}
+
+.example__numbers-footnote-up {
+  padding: 15px 0;
 
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 }
 
 .example__numbers-footnote {
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-
+  order: 2;
+  align-self: center;
   width: 87px;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  margin-top: -9px;
 
   font-size: 12px;
   line-height: 12px;
   font-family: @arial;
-  text-align: center;
   text-transform: none;
   color: @font-main;
 
@@ -67,6 +67,10 @@
   text-align: center;
   text-transform: uppercase;
   color: @font-headlines;
+
+  & br {
+    display: none;
+  }
 }
 
 .example__img-wrapper {
@@ -148,5 +152,85 @@
   &:active::after {
     top: 3px;
     left: 3px;
+  }
+}
+
+@media (min-width: @tablet - @mobile-padding) {
+  .example__headline,
+  .example__block--first-block {
+    width: 708px;
+    margin: 0 auto 20px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .example {
+    padding: 45px 0 70px;
+
+    background-color: #fff;
+    border-top: 1px solid #e6e6e6;
+  }
+  .example__headline {
+  width: auto;
+  margin: 0 @tablet-padding 50px;
+
+  font-size: 60px;
+  }
+
+  .example__block--first-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    margin: 0 @tablet-padding 80px;
+  }
+
+  .example__descr {
+    margin-bottom: 50px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__numbers-wrapper {
+    width: 366px;
+    margin: 0;
+  }
+
+  .example__numbers {
+    width: 162px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .example__numbers-footnote-up {
+    padding: 20px 0;
+  }
+
+  .example__numbers-footnote {
+    width: auto;
+    padding: 0 8px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: #fff;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .example__price-block {
+    margin: 7px 0 0;
+
+    font-size: 20px;
+    line-height: 28px;
+    text-align: right;
+
+    & br {
+      display: block;
+    }
   }
 }
