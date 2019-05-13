@@ -57,6 +57,8 @@
   }
 
   .promo__wrapper {
+    max-width: 1220px;
+    box-sizing: border-box;
     padding-left: 90px;
     margin: 0 @tablet-padding;
   }
@@ -85,5 +87,44 @@
 
     width: 245px;
     margin: 0;
+  }
+}
+
+@media (min-width: @desctop) {
+  .promo {
+    position: relative;
+
+    min-height: 696px;
+    padding: 0;
+
+    background-image:
+      url(../img/picture/index-background-desktop@1x.jpg),
+      linear-gradient(to right, transparent 0%, transparent 50%; @background-promo 50%, @background-promo 100%), url(../img/picture/index-background-desktop@1x.jpg);
+    background-position: top right;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 21%;
+      right: 50%;
+      transform: translateX(71%);
+
+      display: block;
+      width: 552px;
+      height: 499px;
+
+      background-image: url(../img/picture/index-can-desktop@1x.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .promo__wrapper {
+    padding: 225px 0 0 80px;
+    margin: 0 auto;
+  }
+
+  .promo__headlines {
+    margin-bottom: 30px;
   }
 }
