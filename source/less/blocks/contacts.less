@@ -66,4 +66,41 @@
   .contacts__tablet-br {
     display: block;
   }
+
+  .contacts__map {
+    background-image: url(../img/picture/bg-map-tablet@1x.png);
+  }
+}
+
+@media (min-width: @desktop) {
+  .contacts {
+    position: relative;
+
+    padding: 0;
+  }
+
+  .contacts__map {
+    background-image: url(../img/picture/bg-map-desktop@1x.png);
+  }
+
+  .contacts__block {
+    position: absolute;
+    top: 50%;
+
+    width: 570px;
+    box-sizing: border-box;
+    padding: 65px 75px;
+    margin: 0;
+    margin-left: 50%;
+
+    transform: translate(-610px, -50%);
+
+    background-color: #fff;
+  }
+
+  .contacts__addres {
+    width: 170px;
+
+    text-align: left;
+  }
 }
