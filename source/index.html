@@ -85,29 +85,35 @@
     </section>
     <section class="main__example example">
       <h2 class="example__headline">Живой пример</h2>
-      <div class="example__block  example__block--first-block">
-        <p class="example__descr">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__numbers-wrapper">
-          <p class="example__numbers"><span class="example__numbers-footnote">снижение <br>веса</span><span class="example__numbers-footnote-up">5 кг</span></p>
-          <p class="example__numbers"><span class="example__numbers-footnote">затрачено <br>времени</span><span class="example__numbers-footnote-up">60 дней</span></p>
-        </div>
-        <p class="example__price-block">Затраты на питание:<br> 15 000 руб.</p>
-      </div>
-      <div class="example__block">
-        <div class="example__img-wrapper">
-          <picture>
-            <!-- <source> -->
-            <img class="example__img" src="../img/picture/before-mobile.png" alt="Толстый кот" width="320">
-          </picture>
-          <picture class="display-none">
-            <!-- <source> -->
-            <img class="example__img" src="../img/picture/after-mobile.png" alt="Худой кот" width="320">
-          </picture>
-        </div>
-        <div class="example__switch-block">
-          <button class="example__switch-btn" type="button"><span class="example__switch-span">Было</span></button>
-          <div class="example__switch"></div>
-          <button class="example__switch-btn" type="button"><span class="example__switch-span">Стало</span></button>
+      <div class="example__desctop-block">
+        <div class="example__desctop-block-wrapper">
+          <div class="example__block  example__block--first-block">
+            <p class="example__descr">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__numbers-wrapper">
+              <p class="example__numbers"><span class="example__numbers-footnote">снижение <br>веса</span><span class="example__numbers-footnote-up">5 кг</span></p>
+              <p class="example__numbers"><span class="example__numbers-footnote">затрачено <br>времени</span><span class="example__numbers-footnote-up">60 дней</span></p>
+            </div>
+            <p class="example__price-block"><sapn class="example__price-span">Затраты на питание:</sapn><br> 15 000 руб.</p>
+          </div>
+          <div class="example__block">
+            <div class="example__img-wrapper">
+              <picture>
+                <source srcset="img/picture/before-desktop@1x.png" media="(min-width:1300px)">
+                <source srcset="img/picture/before-tablet@1x.png" media="(min-width: 768px)">
+                <img class="example__img" src="img/picture/before-mobile.png" alt="Толстый кот" width="320">
+              </picture>
+              <picture class="display-none">
+                <source srcset="img/picture/after-desktop@1x.png" media="(min-width:1300px)">
+                <source srcset="img/picture/after-tablet@1x.png" media="(min-width: 768px)">
+                <img class="example__img" src="img/picture/after-mobile.png" alt="Худой кот" width="320">
+              </picture>
+            </div>
+            <div class="example__switch-block">
+              <button class="example__switch-btn" type="button"><span class="example__switch-span">Было</span></button>
+              <div class="example__switch"></div>
+              <button class="example__switch-btn" type="button"><span class="example__switch-span">Стало</span></button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
