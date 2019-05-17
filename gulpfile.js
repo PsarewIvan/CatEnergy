@@ -4,8 +4,10 @@ const less = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
-const rename = require("gulp-rename");
+const rename = require('gulp-rename');
 const del = require('del');
+const image = require('gulp-image');
+const webp = require('gulp-webp');
 const browserSync = require('browser-sync').create();
 
 function html() {
@@ -38,8 +40,27 @@ function scripts() {
               .pipe(browserSync.stream());
 }
 
+function images() {
+  return gulp.src('source/img/picture/*.{jpg,png}')
+              .pipe(image())
+              .pipe(gulp.dest('build/img/picture'))
+}
+
+function webpConvert() {
+  return gulp.src('source/img/picture/*.{jpg,png}')
+              .pipe(webp({
+                quality: 85,
+                method: 5
+              }))
+              .pipe(gulp.dest('build/img/webp'))
+}
+
 function clean() {
   return del(['build/*', '!build/img', '!build/fonts']);
+}
+
+function cleanImg() {
+  return del(['build/img/*', '!build/img/icon']);
 }
 
 function watch() {
@@ -55,7 +76,13 @@ function watch() {
 gulp.task('html', html);
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
+gulp.task('images', images);
+gulp.task('webpConvert', webpConvert);
 gulp.task('watch', watch);
+
+gulp.task('buildImg', gulp.series(cleanImg,
+                        gulp.parallel(images, webpConvert)
+                      ));
 
 gulp.task('build', gulp.series(clean,
                       gulp.parallel(html, styles, scripts)
