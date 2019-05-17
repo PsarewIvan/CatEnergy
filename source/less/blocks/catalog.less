@@ -2,3 +2,22 @@
   display: flex;
   flex-direction: column;
 }
+
+@media (min-width: @tablet) {
+  .catalog {
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog__item,
+  .catalog__more {
+    width: 324px;
+  }
+
+  .catalog__item {
+    margin-bottom: 140px;
+    
+    background-color: @background;
+  }
+}

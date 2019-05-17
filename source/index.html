@@ -98,14 +98,20 @@
           <div class="example__block">
             <div class="example__img-wrapper">
               <picture>
-                <source srcset="img/picture/before-desktop@1x.png" media="(min-width:1300px)">
-                <source srcset="img/picture/before-tablet@1x.png" media="(min-width: 768px)">
-                <img class="example__img" src="img/picture/before-mobile.png" alt="Толстый кот" width="320">
+                <source media="(min-width:1300px)" srcset="img/webp/before-desktop@1x.webp, img/webp/before-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width:1300px)" srcset="img/picture/before-desktop@1x.png, img/picture/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp, img/webp/before-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/picture/before-tablet@1x.png, img/picture/before-tablet@2x.png 2x">
+                <source srcset="img/webp/before-mobile@1x.webp, img/webp/before-mobile@2x.webp 2x" type="image/webp">
+                <img class="example__img" src="img/picture/before-mobile@1x.png" srcset="img/picture/before-mobile@2x.png 2x" alt="Толстый кот" width="320">
               </picture>
               <picture class="display-none">
-                <source srcset="img/picture/after-desktop@1x.png" media="(min-width:1300px)">
-                <source srcset="img/picture/after-tablet@1x.png" media="(min-width: 768px)">
-                <img class="example__img" src="img/picture/after-mobile.png" alt="Худой кот" width="320">
+                <source media="(min-width:1300px)" srcset="img/webp/after-desktop@1x.webp, img/webp/after-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width:1300px)" srcset="img/picture/after-desktop@1x.png, img/picture/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp, img/webp/after-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/picture/after-tablet@1x.png, img/picture/after-tablet@2x.png 2x">
+                <source srcset="img/webp/after-mobile@1x.webp, img/webp/after-mobile@2x.webp 2x" type="image/webp">
+                <img class="example__img" src="img/picture/after-mobile@1x.png" srcset="img/picture/after-mobile@2x.png 2x" alt="Худой кот" width="320">
               </picture>
             </div>
             <div class="example__switch-block">
@@ -123,7 +129,7 @@
         <p class="contacts__descr">приглашаем<br>к сотрудничеству<br>дилеров!</p>
         <address class="contacts__addres">ул. Большая<br>Конюшенная, д. 19/8<br><br class="contacts__tablet-br">Санкт-Петербург</address>
       </div>
-      <div class="contacts__map map"></div>
+      <div class="contacts__map"></div>
     </section>
   </main>
   <footer class="footer">

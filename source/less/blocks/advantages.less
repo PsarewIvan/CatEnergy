@@ -33,23 +33,42 @@
     background-color: @main-color;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 50px auto;
   }
 }
 
 .advantages__descr--first::before {
-  background-image: url('../img/icon/advantage-1.png');
+  background-image: url('../img/picture/advantage-1@1x.png');
 }
 
 .advantages__descr--second::before {
-  background-image: url('../img/icon/advantage-2.png');
+  background-image: url('../img/picture/advantage-2@1x.png');
 }
 
 .advantages__descr--third::before {
-  background-image: url('../img/icon/advantage-3.png');
+  background-image: url('../img/picture/advantage-3@1x.png');
 }
 
 .advantages__descr--fourth::before {
-  background-image: url('../img/icon/advantage-4.png');
+  background-image: url('../img/picture/advantage-4@1x.png');
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .advantages__descr--first::before {
+    background-image: url('../img/picture/advantage-1@2x.png');
+  }
+  
+  .advantages__descr--second::before {
+    background-image: url('../img/picture/advantage-2@2x.png');
+  }
+  
+  .advantages__descr--third::before {
+    background-image: url('../img/picture/advantage-3@2x.png');
+  }
+  
+  .advantages__descr--fourth::before {
+    background-image: url('../img/picture/advantage-4@2x.png');
+  }
 }
 
 @media (min-width: @tablet) {

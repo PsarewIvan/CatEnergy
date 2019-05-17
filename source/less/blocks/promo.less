@@ -5,17 +5,26 @@
   padding: 25px 0 0 0;
 
   background-image:
-    url('../img/picture/chiken-background.png'),
-    url('../img/picture/keks-green.jpg'),
+    url('../img/picture/chiken-background-mobile@1x.png'),
+    url('../img/picture/index-background-mobile@1x.jpg'),
     linear-gradient(to bottom, #63a73a, #63a73a 305px, #fff 305px, #fff);
   background-repeat: no-repeat;
+  background-size: 280px auto;
   background-position:  center 165px,
                         top center,
                         top center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+    url('../img/picture/chiken-background-mobile@2x.png'),
+    url('../img/picture/index-background-mobile@2x.jpg'),
+    linear-gradient(to bottom, #63a73a, #63a73a 305px, #fff 305px, #fff);
+  }
 }
 
 .promo__wrapper {
-  margin: 0 @mobile-padding;
+  width: @mobile - (@mobile-padding * 2);
+  margin: 0 auto;
 }
 
 .promo__headlines {
@@ -44,23 +53,29 @@
   left: 0;
   right: 0;
 
-  margin: 0 @mobile-padding;
+  width: @mobile - (@mobile-padding * 2);
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet) {
   .promo {
     min-height: 810px;
 
-    background: url('../img/picture/chiken-background-tablet.jpg');
+    background-image: url('../img/picture/chiken-background-tablet@1x.jpg');
+    background-size: 709px auto;
     background-repeat: no-repeat;
     background-position: center bottom;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('../img/picture/chiken-background-tablet@2x.jpg');
+    }
   }
 
   .promo__wrapper {
-    max-width: 1220px;
+    width: @tablet - (@tablet-padding * 2);
     box-sizing: border-box;
     padding-left: 90px;
-    margin: 0 @tablet-padding;
+    margin: 0 auto;
   }
 
   .promo__headlines {
@@ -99,8 +114,15 @@
 
     background-image:
       url(../img/picture/index-background-desktop@1x.jpg),
-      linear-gradient(to right, transparent 0%, transparent 50%; @background-promo 50%, @background-promo 100%), url(../img/picture/index-background-desktop@1x.jpg);
+      linear-gradient(to right, transparent 0%, transparent 50%; @background-promo 50%, @background-promo 100%);
     background-position: top right;
+    background-size: 680px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+      url(../img/picture/index-background-desktop@2x.jpg),
+      linear-gradient(to right, transparent 0%, transparent 50%; @background-promo 50%, @background-promo 100%);
+    }
 
     &::before {
       content: '';
@@ -113,13 +135,19 @@
       width: 552px;
       height: 499px;
 
-      background-image: url(../img/picture/index-can-desktop@1x.png);
+      background-image: url(../img/picture/chiken-background-desktop@1x.png);
       background-position: center;
+      background-size: 552px auto;
       background-repeat: no-repeat;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url(../img/picture/chiken-background-desktop@2x.png);
+      }
     }
   }
 
   .promo__wrapper {
+    width: @desktop - (@desktop-padding * 2);
     padding: 225px 0 0 80px;
     margin: 0 auto;
   }

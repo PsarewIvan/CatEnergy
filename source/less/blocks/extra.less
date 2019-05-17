@@ -60,13 +60,17 @@
 
   margin: 0 @mobile-padding;
 
-  background-image: url(../img/picture/gift-photo-mobile.jpg);
+  background-image: url(../img/picture/gift-photo-mobile@1x.jpg);
   background-color: @main-color;
   background-repeat: no-repeat;
   background-position: center;
   background-clip: content-box;
   background-origin: content-box;
   background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url(../img/picture/gift-photo-mobile@2x.jpg);
+  }
 
   &::after {
     content: '';
