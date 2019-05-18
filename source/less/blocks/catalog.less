@@ -10,14 +10,19 @@
     justify-content: space-between;
   }
 
-  .catalog__item,
-  .catalog__more {
+  .catalog__item {
     width: 324px;
+    margin-bottom: 55px;
   }
 
+  .catalog__more {
+    width: 324px;
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: @desktop) {
   .catalog__item {
-    margin-bottom: 140px;
-    
-    background-color: @background;
+    width: 245px;
   }
 }
