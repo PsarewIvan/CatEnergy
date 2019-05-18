@@ -4,7 +4,14 @@
   font-size: 24px;
   line-height: 24px;
 
-  background-image: linear-gradient(to bottom, transparent 0, transparent 14px, @main-color 14px, @main-color 17px, transparent 17px, transparent 100%);
+  background-image:
+    linear-gradient(to right, #fff 0, #fff 33%, transparent 33%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, transparent 14px, @main-color 14px, @main-color 17px, transparent 17px, transparent 100%);
+}
+
+.extra__headline-span-wrapper {
+  width: @mobile - (@mobile-padding * 2);
+  margin: 0 auto;
 }
 
 .extra__headline-span {
@@ -22,7 +29,13 @@
   list-style: none;
 }
 
+.extra__li-wrapper {
+  width: @mobile - (@mobile-padding * 2);
+  margin: 0 auto;
+}
+
 .extra__li {
+  box-sizing: border-box;
   padding: 14px 0 17px;
 
   border-top: 1px solid #cdcdcd;
@@ -58,18 +71,17 @@
 .extra__stock {
   position: relative;
 
-  margin: 0 @mobile-padding;
+  width: @mobile - (@mobile-padding * 2);
+  margin: 0 auto;
 
   background-image: url(../img/picture/gift-photo-mobile@1x.jpg);
   background-color: @main-color;
   background-repeat: no-repeat;
   background-position: center;
-  background-clip: content-box;
-  background-origin: content-box;
-  background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url(../img/picture/gift-photo-mobile@2x.jpg);
+    background-size: 280px auto;
   }
 
   &::after {
@@ -92,12 +104,107 @@
 
 .extra__stock-descr {
   display: block;
-  width: 150px;
   padding: 185px 0 43px;
-  margin: 0 auto;
+  margin: 0 20px;
 
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #fff;
+}
+
+@media (min-width: @tablet) {
+  .extra__headline {
+    margin: 0 0 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    background-image: linear-gradient(to bottom, transparent 0, transparent 16px, @main-color 16px, @main-color 19px, transparent 19px, transparent 100%);
+  }
+
+  .extra__headline-span-wrapper {
+    width: @tablet - (@tablet-padding * 2);
+    margin: 0 auto;
+  }
+
+  .extra__headline-span {
+    padding: 0 35px;
+  }
+
+  .extra__list {
+    width: @tablet - (@tablet-padding * 2);
+    margin: 0 auto 69px;
+  }
+
+  .extra__li-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    margin: 25px 40px 27px;
+  }
+
+  .extra__li {
+    padding: 0;
+    margin: -1px 0 0;
+
+    border: 1px solid #cdcdcd;
+  }
+
+  .extra__item-table,
+  .extra__item {
+    width: 284px;
+    align-self: flex-end;
+    margin: 0 0 25px;
+  }
+
+  .extra__item {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__table-data {
+    font-size: 16px;
+    line-height: 20px;
+    
+    &:first-child {
+      width: 192px;
+  
+      text-align: right;
+    }
+  }
+
+  .extra__button {
+    width: 100%;
+  }
+
+  .extra__stock {
+    display: flex;
+    width: @tablet - (@tablet-padding * 2);
+    min-height: 200px;
+    margin: 0 auto;
+
+    background-image: url(../img/picture/gift-photo-tablet@1x.jpg);
+
+    &::after {
+      left: 90px;
+      
+      margin: 0;
+      transform: none;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/picture/gift-photo-tablet@2x.jpg);
+      background-size: 708px auto;
+    }
+  }
+
+  .extra__stock-descr {
+    align-self: center;
+    padding: 0;
+    margin: 0 0 0 423px;
+
+    text-align: left;
+  }
 }
