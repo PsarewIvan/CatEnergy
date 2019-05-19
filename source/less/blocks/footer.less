@@ -6,11 +6,11 @@
 .footer__wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 @mobile-padding;
 }
 
 .footer__main-link {
-  margin-bottom: 30px;
+  width: @mobile - (@mobile-padding * 2);
+  margin:0 auto 30px;
 
   text-align: center;
 }
@@ -25,8 +25,8 @@
 .footer__social-list {
   display: flex;
   justify-content: center;
-
-  margin: 0;
+  width: @mobile - (@mobile-padding * 2);
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
