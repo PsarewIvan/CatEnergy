@@ -160,7 +160,7 @@
 
 @media (min-width: @tablet) {
   .example {
-    padding: 45px 0 70px;
+    padding: 45px 0 0;
 
     background-color: #fff;
     border-top: 1px solid #e6e6e6;
@@ -228,6 +228,16 @@
     & br {
       display: block;
     }
+  }
+
+  .example__img {
+    width: 690px;
+  }
+
+  .example__block--second-block {
+    padding-bottom: 70px;
+
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 170px, @background 170px, @background 100%);
   }
 }
 
