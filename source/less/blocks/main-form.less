@@ -3,11 +3,15 @@
 }
 
 .main-form__headline {
-  margin: 0 @mobile-padding 25px;
+  width: @mobile - (@mobile-padding * 2);
+  margin: 0 auto 25px;
 }
 
 .main-form__description {
-  margin: 0 @mobile-padding 20px;
+  width: @mobile - (@mobile-padding * 2);
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+  padding-right: 20px;
 
   font-family: @oswald;
   text-transform: uppercase;
@@ -20,4 +24,31 @@
 
 .main-form__contacts {
   padding-top: 35px;
+}
+
+@media (min-width: @tablet) {
+  .main-form {
+    padding: 10px 0 0;
+  }
+
+  .main-form__headline {
+    width: @tablet - (@tablet-padding * 2);
+    margin: 0 auto 60px;
+
+    font-size: 60px;
+  }
+
+  .main-form__description {
+    width: @tablet - (@tablet-padding * 2);
+    box-sizing: border-box;
+    padding-left: 40px;
+    margin: 0 auto 70px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .main-form__form {
+    margin: 0 0 72px;
+  }
 }

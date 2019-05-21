@@ -45,7 +45,7 @@
   </header>
   <main class="main-form">
     <h2 class="main-form__headline">Подбор программы</h2>
-    <p class="main-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <p class="main-form__description">Заполните анкету и мы подберем <br>программу питания для вашего кота</p>
     <form class="main-form__form form" action="https://echo.htmlacademy.ru" method="POST">
       <fieldset class="form__first-block">
         <legend class="visually-hidden">Основные данные</legend>
@@ -82,7 +82,7 @@
         </ul>
       </fieldset>
       <fieldset class="form__contact-block">
-        <legend class="form__legend"><span class="form__legend-span">Контактные данные (владельца кота)</span></legend>
+        <legend class="form__legend"><div class="form__legend-wrapper"><span class="form__legend-span">Контактные данные <br>(владельца кота)</span></div></legend>
         <ul class="form__contact-list">
           <li class="form__contact-li">
             <label class="form__label form__label--email" for="email">E-mail:*</label>
@@ -101,13 +101,13 @@
         </ul>
       </fieldset>
       <fieldset class="form__comment-block">
-        <legend class="form__legend"><span class="form__legend-span">Комментарий</span></legend>
+        <legend class="form__legend"><div class="form__legend-wrapper"><span class="form__legend-span">Комментарий</span></div></legend>
         <div class="form__textarea-wrapper">
           <textarea class="form__input form__input--textarea" name="comment" id="comment" cols="30" rows="3" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
       </fieldset>
       <fieldset class="form__additionally-block">
-        <legend class="form__legend"><span class="form__legend-span">Дополнительно</span></legend>
+        <legend class="form__legend"><div class="form__legend-wrapper"><span class="form__legend-span">Дополнительно</span></div></legend>
         <ul class="form__additionally-list">
           <li class="form__additionally-li">
             <input class="form__input--additionall visually-hidden" id="sugar" type="checkbox" name="sugar" checked>
@@ -127,16 +127,18 @@
           </li>
         </ul>
       </fieldset>
-      <div class="form__submit-wrapper">
-        <button class="button button--form" type="submit">Отправить заявку</button>
+      <div class="form__footer">
+        <div class="form__submit-wrapper">
+          <button class="button button--form" type="submit">Отправить заявку</button>
+        </div>
+        <p class="form__footnote">* — Обязательные поля</p>
       </div>
-      <p class="form__footnote">* — Обязательные поля</p>
     </form>
     <section class="main-form__contacts contacts contacts--form">
       <h3 class="visually-hidden">Как нас найти</h3>
       <div class="contacts__block">
         <p class="contacts__descr">приглашаем  к сотрудничеству  дилеров!</p>
-        <address class="contacts__addres">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</address>
+        <address class="contacts__addres">ул. Большая <br>Конюшенная, д. 19/8  <br>Санкт-Петербург</address>
       </div>
       <div class="contacts__map"></div>
     </section>
