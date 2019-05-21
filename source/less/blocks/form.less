@@ -462,3 +462,80 @@
     text-align: left;
   }
 }
+
+@media (min-width: @desktop) {
+  .form__first-desktop-block {
+    display: flex;
+    justify-content: space-between;
+    width: @desktop - (@desktop-padding * 2);
+    margin: 0 auto 72px;
+  }
+
+  .form__first-block,
+  .form__program-block {
+    width: 570px;
+    margin: 0;
+  }
+
+  .form__first-block-list,
+  .form__program-list {
+    width: auto;
+    padding: 0;
+  }
+
+  .form__program-list {
+    padding: 35px 27px;
+  }
+
+  .form__legend-wrapper {
+    width: @desktop;
+  }
+
+  .form__legend-span {
+    padding: 0 @desktop-padding;
+  }
+
+  .form__contact-list {
+    display: flex;
+    justify-content: space-between;
+    width: @desktop - (@desktop-padding * 2);
+    padding: 0;
+  }
+
+  .form__contact-li {
+    width: 570px;
+    margin: 0;
+  }
+
+  .form__textarea-wrapper {
+    width: @desktop - (@desktop-padding * 2);
+    padding: 0;
+  }
+
+  .form__additionally-block {
+    margin-bottom: 10px;
+  }
+
+  .form__additionally-list {
+    width: @desktop - (@desktop-padding * 2);
+    padding: 0;
+  }
+
+  .form__additionally-li {
+    width: 245px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+  }
+
+  .form__footer {
+    width: @desktop - (@desktop-padding * 2);
+    padding: 0;
+  }
+
+  .form__submit-wrapper,
+  .form__footnote {
+    width: 570px;
+  }
+}

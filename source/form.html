@@ -47,40 +47,42 @@
     <h2 class="main-form__headline">Подбор программы</h2>
     <p class="main-form__description">Заполните анкету и мы подберем <br>программу питания для вашего кота</p>
     <form class="main-form__form form" action="https://echo.htmlacademy.ru" method="POST">
-      <fieldset class="form__first-block">
-        <legend class="visually-hidden">Основные данные</legend>
-        <ul class="form__first-block-list">
-          <li class="form__first-block-li">
-            <label class="form__label form__label--name" for="name">Имя:*</label>
-            <input class="form__input form__input--name" id="name" type="text" name="name" placeholder="Барсик">
-          </li>
-          <li class="form__first-block-li">
-            <label class="form__label form__label--weight" for="weight">Вес (кг):*</label>
-            <input class="form__input form__input--weight" id="weight" type="number" name="weight" placeholder="7" min="0" max="100">
-          </li>
-          <li class="form__first-block-li">
-            <label class="form__label form__label--age" for="age">Возраст (лет):</label>
-            <input class="form__input form__input--age" id="age" type="number" name="age" placeholder="7" min="0" max="100">
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="form__program-block">
-        <legend class="visually-hidden">Выберите программу</legend>
-        <ul class="form__program-list">
-          <li class="form__program-li">
-            <input class="visually-hidden form__input--program" id="weightLoss" type="radio" name="program" value="weightLoss" checked>
-            <label class="form__label form__label--program" for="weightLoss">Похудение</label>
-          </li>
-          <li class="form__program-li">
-            <input class="visually-hidden form__input--program" id="weightGain" type="radio" name="program" value="weightGain">
-            <label class="form__label form__label--program" for="weightGain">Набор массы</label>
-          </li>
-          <li class="form__program-li">
-            <input class="visually-hidden form__input--program" id="weightOther" type="radio" name="program" value="weightOther">
-            <label class="form__label form__label--program" for="weightOther">Не знаю (Нужен ваш совет)</label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="form__first-desktop-block">
+        <fieldset class="form__first-block">
+          <legend class="visually-hidden">Основные данные</legend>
+          <ul class="form__first-block-list">
+            <li class="form__first-block-li">
+              <label class="form__label form__label--name" for="name">Имя:*</label>
+              <input class="form__input form__input--name" id="name" type="text" name="name" placeholder="Барсик">
+            </li>
+            <li class="form__first-block-li">
+              <label class="form__label form__label--weight" for="weight">Вес (кг):*</label>
+              <input class="form__input form__input--weight" id="weight" type="number" name="weight" placeholder="7" min="0" max="100">
+            </li>
+            <li class="form__first-block-li">
+              <label class="form__label form__label--age" for="age">Возраст (лет):</label>
+              <input class="form__input form__input--age" id="age" type="number" name="age" placeholder="7" min="0" max="100">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__program-block">
+          <legend class="visually-hidden">Выберите программу</legend>
+          <ul class="form__program-list">
+            <li class="form__program-li">
+              <input class="visually-hidden form__input--program" id="weightLoss" type="radio" name="program" value="weightLoss" checked>
+              <label class="form__label form__label--program" for="weightLoss">Похудение</label>
+            </li>
+            <li class="form__program-li">
+              <input class="visually-hidden form__input--program" id="weightGain" type="radio" name="program" value="weightGain">
+              <label class="form__label form__label--program" for="weightGain">Набор массы</label>
+            </li>
+            <li class="form__program-li">
+              <input class="visually-hidden form__input--program" id="weightOther" type="radio" name="program" value="weightOther">
+              <label class="form__label form__label--program" for="weightOther">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <fieldset class="form__contact-block">
         <legend class="form__legend"><div class="form__legend-wrapper"><span class="form__legend-span">Контактные данные <br>(владельца кота)</span></div></legend>
         <ul class="form__contact-list">
