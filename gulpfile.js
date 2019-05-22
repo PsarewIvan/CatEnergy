@@ -8,6 +8,7 @@ const rename = require('gulp-rename');
 const del = require('del');
 const image = require('gulp-image');
 const webp = require('gulp-webp');
+const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
 
 function html() {
@@ -55,6 +56,18 @@ function webpConvert() {
               .pipe(gulp.dest('build/img/webp'))
 }
 
+function createSvgSprite() {
+  return gulp.src('source/img/icon/*.svg')
+              .pipe(svgSprite({
+                mode: {
+                  stack: {
+                    sprite: "../sprite.svg"
+                  }
+                },
+              }))
+              .pipe(gulp.dest('build/img/icon/'));
+}
+
 function clean() {
   return del(['build/*', '!build/img', '!build/fonts']);
 }
@@ -78,6 +91,7 @@ gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('images', images);
 gulp.task('webpConvert', webpConvert);
+gulp.task('svgSprite', createSvgSprite);
 gulp.task('watch', watch);
 
 gulp.task('buildImg', gulp.series(cleanImg,
