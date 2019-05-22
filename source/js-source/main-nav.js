@@ -1,8 +1,8 @@
-var mainNav = document.querySelector('.js--main-nav');
-var mainNavButton = document.querySelector('.js--header__nav-btn');
+const mainNav = document.querySelector('.js--main-nav');
+const mainNavButton = document.querySelector('.js--header__nav-btn');
 
 if (matchMedia) {
-  var mq = window.matchMedia( "(min-width: 768px)" );
+  let mq = window.matchMedia( "(min-width: 768px)" );
   mq.addListener(WidthChange);
   WidthChange(mq);
 }

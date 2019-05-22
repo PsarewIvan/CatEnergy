@@ -3,6 +3,7 @@ const concat = require('gulp-concat');
 const less = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const del = require('del');
@@ -32,6 +33,9 @@ function styles() {
 
 function scripts() {
   return gulp.src('source/js-source/**/*.js')
+              .pipe(babel({
+                presets: ['@babel/env']
+              }))
               .pipe(concat('script.js'))
               .pipe(uglify({
                 toplevel: true
