@@ -250,8 +250,39 @@
   }
   
   .example__switch {
-    width: 444px;
-    padding: 0 7px;
+    width: 430px;
+    height: 6px;
+
+    border: none;
+    border-radius: 3px;
+    background-color: #dcdcdc;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .example__switch-span {
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+  }
+
+  .example__switch-btn {
+    padding: 0 24px;
+
+    font-size: 20px;
+
+    &:hover .example__switch-span,
+    &:focus .example__switch-span {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+    }
+
+    &:active .example__switch-span {
+      border: none;
+    }
   }
 }
 
@@ -335,8 +366,24 @@
   }
 
   .example__switch-btn {
-    font-size: 20px;
+    min-width: auto;
+    padding: 0;
 
-    border-bottom: 1px dotted #bebebe;
+    font-size: 20px;
+  }
+
+  .example__block--second-block {
+    padding-bottom: 0;
+  }
+
+  .example__switch-block {
+    justify-content: space-between;
+    width: 570px;
+    margin: 0 0 0 auto;
+  }
+
+  .example__switch {
+    padding: 0;
+    margin: 0 20px;
   }
 }
