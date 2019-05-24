@@ -11,6 +11,8 @@ const image = require('gulp-image');
 const webp = require('gulp-webp');
 const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps');
+const ghpages = require('gh-pages');
 
 function html() {
   return gulp.src('source/*.html')
@@ -20,6 +22,7 @@ function html() {
 
 function styles() {
   return gulp.src('source/less/main.less')
+              .pipe(sourcemaps.init())
               .pipe(less())
               .pipe(autoprefixer({
                 browsers: ['> 0.1%'],
@@ -27,6 +30,7 @@ function styles() {
               }))
               .pipe(cleanCSS({level: 2}))
               .pipe(rename({suffix: "-min"}))
+              .pipe(sourcemaps.write())
               .pipe(gulp.dest('build/css'))
               .pipe(browserSync.stream());
 }
@@ -107,3 +111,5 @@ gulp.task('build', gulp.series(clean,
                     ));
 
 gulp.task('dev', gulp.series('build', watch));
+
+ghpages.publish('build');
