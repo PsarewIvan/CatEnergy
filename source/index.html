@@ -94,7 +94,7 @@
           </div>
           <div class="example__block example__block--second-block">
             <div class="example__img-wrapper">
-              <picture>
+              <picture class="js-example__picture--before">
                 <source media="(min-width:1300px)" srcset="img/webp/before-desktop@1x.webp, img/webp/before-desktop@2x.webp 2x" type="image/webp">
                 <source media="(min-width:1300px)" srcset="img/picture/before-desktop@1x.png, img/picture/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp, img/webp/before-tablet@2x.webp 2x" type="image/webp">
@@ -102,7 +102,7 @@
                 <source srcset="img/webp/before-mobile@1x.webp, img/webp/before-mobile@2x.webp 2x" type="image/webp">
                 <img class="example__img" src="img/picture/before-mobile@1x.png" srcset="img/picture/before-mobile@2x.png 2x" alt="Толстый кот" width="320">
               </picture>
-              <picture class="display-none">
+              <picture class="js-example__picture--after example__picture--hide">
                 <source media="(min-width:1300px)" srcset="img/webp/after-desktop@1x.webp, img/webp/after-desktop@2x.webp 2x" type="image/webp">
                 <source media="(min-width:1300px)" srcset="img/picture/after-desktop@1x.png, img/picture/after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp, img/webp/after-tablet@2x.webp 2x" type="image/webp">
@@ -112,9 +112,9 @@
               </picture>
             </div>
             <div class="example__switch-block">
-              <button class="example__switch-btn" type="button"><span class="example__switch-span">Было</span></button>
-              <div class="example__switch"></div>
-              <button class="example__switch-btn" type="button"><span class="example__switch-span">Стало</span></button>
+              <button class="example__switch-btn js-example__switch-btn--before" type="button"><span class="example__switch-span">Было</span></button>
+              <div class="example__switch js-example__switch"></div>
+              <button class="example__switch-btn js-example__switch-btn--after" type="button"><span class="example__switch-span">Стало</span></button>
             </div>
           </div>
         </div>
