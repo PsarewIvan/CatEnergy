@@ -11,7 +11,6 @@ if (matchMedia) {
 }
 
 function WidthChangeExample(mq) {
-  console.log(mq.matches);
   if (mq.matches) {
     exampleAfterBtn.addEventListener('click', showImgAfter);
     exampleBeforeBtn.addEventListener('click', showImgBefore);
