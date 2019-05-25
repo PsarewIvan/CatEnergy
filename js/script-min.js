@@ -1,14 +1,11 @@
-"use strict";
-
-var exampleAfterBtn = document.querySelector('.js-example__switch-btn--after');
-var exampleBeforeBtn = document.querySelector('.js-example__switch-btn--before');
-var exampleToggle = document.querySelector('.js-example__switch');
-var imgAfter = document.querySelector('.js-example__picture--after');
-var imgBefore = document.querySelector('.js-example__picture--before');
-var imgHide = 'example__picture--hide';
+const exampleAfterBtn = document.querySelector('.js-example__switch-btn--after');
+const exampleBeforeBtn = document.querySelector('.js-example__switch-btn--before');
+const exampleToggle = document.querySelector('.js-example__switch');
+const imgAfter = document.querySelector('.js-example__picture--after');
+const imgBefore = document.querySelector('.js-example__picture--before');const imgHide = 'example__picture--hide';
 
 if (matchMedia) {
-  var mqExample = window.matchMedia('(max-width: 768px)');
+  var mqExample = window.matchMedia( '(max-width: 768px)' );
   mqExample.addListener(WidthChangeExample);
   WidthChangeExample(mqExample);
 }
@@ -45,15 +42,16 @@ function toggleImg(evt) {
   imgAfter.classList.toggle(imgHide);
   exampleToggle.classList.toggle('example__switch--after');
 }
-"use strict";
 
 if (matchMedia && document.querySelector('#ymap')) {
   ymaps.ready(function () {
-    var mapWidth = window.matchMedia('(max-width: 768px)');
+    var mapWidth = window.matchMedia( '(max-width: 768px)' );
+
     var myMap = new ymaps.Map("ymap", {
       center: [59.938631, 30.3230554],
       zoom: 17
     });
+
     var placemarkMobile = new ymaps.Placemark([59.938631, 30.3230554], {
       balloonContentHeader: "Cat Energy",
       balloonContentBody: "ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург",
@@ -64,6 +62,7 @@ if (matchMedia && document.querySelector('#ymap')) {
       iconImageSize: [45, 38],
       iconImageOffset: [-22, -38]
     });
+
     var placemarkTablet = new ymaps.Placemark([59.938631, 30.3230554], {
       balloonContentHeader: "Cat Energy",
       balloonContentBody: "ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург",
@@ -74,9 +73,14 @@ if (matchMedia && document.querySelector('#ymap')) {
       iconImageSize: [90, 76],
       iconImageOffset: [-22, -38]
     });
+    
     mapWidth.addListener(addPlacemark);
     addPlacemark(mapWidth);
-    myMap.behaviors.disable(['drag', 'scrollZoom']);
+
+    myMap.behaviors.disable([
+      'drag',
+      'scrollZoom'
+    ]);
   });
 }
 
@@ -89,26 +93,24 @@ function addPlacemark(mq) {
     myMap.geoObjects.add(placemarkTablet);
   }
 }
-"use strict";
 
-var mainNav = document.querySelector('.js--main-nav');
-var mainNavButton = document.querySelector('.js--header__nav-btn');
+const mainNav = document.querySelector('.js--main-nav');
+const mainNavButton = document.querySelector('.js--header__nav-btn');
 
 if (matchMedia) {
-  var mqNav = window.matchMedia('(min-width: 768px)');
+  let mqNav = window.matchMedia( '(min-width: 768px)' );
   mqNav.addListener(WidthChangeNav);
   WidthChangeNav(mqNav);
 }
 
-mainNavButton.addEventListener('click', function (evt) {
+mainNavButton.addEventListener('click', function(evt) {
   evt.preventDefault();
-
   if (mainNav.classList.contains('display-none')) {
     mainNav.classList.remove('display-none');
-    mainNavButton.classList.add('header__nav-btn--close');
+    mainNavButton.classList.add('header__nav-btn--close')
   } else {
     mainNav.classList.add('display-none');
-    mainNavButton.classList.remove('header__nav-btn--close');
+    mainNavButton.classList.remove('header__nav-btn--close')
   }
 });
 
