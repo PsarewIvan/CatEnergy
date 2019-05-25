@@ -64,9 +64,9 @@ if (document.querySelector('#ymap')) {
     myMap.geoObjects.add(placemark);
 
     myMap.behaviors.disable(['scrollZoom']);
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-      myMap.behaviors.disable('drag');
-    }
+    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    //   myMap.behaviors.disable('drag');
+    // }
   });
 }
 
