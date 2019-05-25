@@ -24,7 +24,7 @@
 }
 
 .contacts__map {
-  min-height: 400px;
+  min-height: 360px;
 
   background-image: url(../img/picture/bg-map-mobile@1x.png);
   background-repeat: no-repeat;
@@ -46,6 +46,16 @@
 }
 
 @media (min-width: @tablet) {
+  .ymaps-2-1-73-image {
+    left: -55px !important;
+    top: -94px !important;
+
+    width: 110px !important;
+    height: 94px !important;
+
+    background-size: 110px 94px !important;
+  }
+  
   .contacts {
     padding-top: 68px;
   }
@@ -108,6 +118,8 @@
     transform: translate(-610px, -50%);
 
     background-color: #fff;
+
+    z-index: 1;
   }
 
   .contacts__addres {
