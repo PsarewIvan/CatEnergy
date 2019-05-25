@@ -37,13 +37,13 @@ function styles() {
 
 function scripts() {
   return gulp.src('source/js-source/**/*.js')
-              .pipe(babel({
-                presets: ['@babel/env']
-              }))
+              // .pipe(babel({
+              //   presets: ['@babel/env']
+              // }))
               .pipe(concat('script.js'))
-              .pipe(uglify({
-                toplevel: true
-              }))
+              // .pipe(uglify({
+              //   toplevel: true
+              // }))
               .pipe(rename({suffix: "-min"}))
               .pipe(gulp.dest('build/js'))
               .pipe(browserSync.stream());
