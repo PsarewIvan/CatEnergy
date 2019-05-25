@@ -63,10 +63,10 @@ if (document.querySelector('#ymap')) {
     
     myMap.geoObjects.add(placemark);
 
-    myMap.behaviors.disable([
-      'drag',
-      'multiTouch'
-    ]);
+    myMap.behaviors.disable(['scrollZoom']);
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      myMap.behaviors.disable('drag');
+    }
   });
 }
 
