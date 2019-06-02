@@ -4,6 +4,7 @@
   "description": "Учебный проект HTML Academy",
   "main": "gulpfile.js",
   "dependencies": {
+    "axios": "^0.19.0",
     "gulp": "^4.0.1",
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.4.0",
