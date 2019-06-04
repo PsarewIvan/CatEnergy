@@ -93,7 +93,7 @@ function svgMin() {
 }
 
 function createSvgSprite() {
-  return gulp.src('source/img/icon/*.svg')
+  return gulp.src('source/img/sprite/*.svg')
               .pipe(svgSprite({
                 mode: {
                   stack: {
