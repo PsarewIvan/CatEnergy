@@ -2,8 +2,6 @@ const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const concat = require('gulp-concat');
 const rigger = require('gulp-rigger');
-const replace = require('gulp-replace');
-const cheerio = require('gulp-cheerio');
 
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
@@ -137,15 +135,6 @@ function svgMin() {
                   pretty: true  // убирает лишние пробелы
                 }
               }))
-              .pipe(cheerio({
-                run: function ($) {  // удаляет ненужные атрибуты
-                  $('[fill]').removeAttr('fill');
-                  $('[stroke]').removeAttr('stroke');
-                  $('[style]').removeAttr('style');
-                },
-                parserOptions: {xmlMode: true}
-              }))
-              .pipe(replace('&gt;', '>'))  // исправляет баг cheerio по замене '>'
               .pipe(gulp.dest(path.build.svg));
 }
 
@@ -156,20 +145,7 @@ function createSvgSprite() {
                   pretty: true  // убирает лишние пробелы
                 }
               }))
-              .pipe(cheerio({
-                run: function ($) {  // удаляет ненужные атрибуты
-                  $('[fill]').removeAttr('fill');
-                  $('[stroke]').removeAttr('stroke');
-                  $('[style]').removeAttr('style');
-                },
-                parserOptions: {xmlMode: true}
-              }))
-              .pipe(replace('&gt;', '>'))  // исправляет баг cheerio по замене '>'
               .pipe(svgSprite({
-                // svg: {
-                //   xmlDeclaration: true,
-                //   doctypeDeclaration: false
-                // },
                 mode: {
                   symbol: {
                     sprite: "../sprite.svg"
