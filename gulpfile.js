@@ -75,7 +75,7 @@ function html() {
 function styles() {
   return gulp.src(path.source.style)
               .pipe(plumber())
-              .pipe(sourcemaps.init())
+              // .pipe(sourcemaps.init())
               .pipe(less())
               .pipe(autoprefixer({
                 browsers: ['> 0.1%'],
@@ -83,7 +83,7 @@ function styles() {
               }))
               .pipe(cleanCSS({level: 2}))
               .pipe(rename({suffix: "-min"}))
-              .pipe(sourcemaps.write())
+              // .pipe(sourcemaps.write())
               .pipe(gulp.dest(path.build.style))
               .pipe(browserSync.stream());
 }
@@ -99,7 +99,7 @@ function scripts() {
   return gulp.src(path.source.js)
               .pipe(rigger())
               .pipe(plumber())
-              .pipe(sourcemaps.init())
+              // .pipe(sourcemaps.init())
               .pipe(babel({
                 presets: ['@babel/env']
               }))
@@ -108,7 +108,7 @@ function scripts() {
               }))
               .pipe(sourcemaps.write())
               .pipe(rename('script-min.js'))
-              .pipe(sourcemaps.write())
+              // .pipe(sourcemaps.write())
               .pipe(gulp.dest(path.build.js))
               .pipe(browserSync.stream());
 }
