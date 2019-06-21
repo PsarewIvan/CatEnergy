@@ -1,5 +1,8 @@
-.contacts {
+.contacts--catalog,
+.contacts--form {
   padding-top: 30px;
+  
+  background-color: @background;
 }
 
 .contacts__block {
@@ -20,7 +23,10 @@
 }
 
 .contacts__addres {
+  margin-top: -2px;
+  
   line-height: 20px;
+  font-style: normal;
 }
 
 .contacts__map {
@@ -34,11 +40,6 @@
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url(../img/picture/bg-map-mobile@2x.png);
   }
-}
-
-.contacts--catalog,
-.contacts--form {
-  background-color: @background;
 }
 
 .contacts__tablet-br {

@@ -10,10 +10,21 @@
 
 .footer__main-link {
   width: @mobile - (@mobile-padding * 2);
-  margin:0 auto 30px;
+  margin:0 auto 26px;
 
   text-align: center;
+
+  &[href]:hover svg,
+  &[href]:focus svg {
+    opacity: 0.8;
+  }
+
+  &[href]:active svg {
+    opacity: 0.6;
+  }
 }
+
+
 
 .footer__social {
   padding: 2px 0;
@@ -35,7 +46,7 @@
 .footer__social-link {
   display: flex;
   justify-content: center;
-  width: 60px;
+  width: 55px;
   height: 60px;
 
   &:hover svg,

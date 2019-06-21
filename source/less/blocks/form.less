@@ -6,10 +6,17 @@
 .form__first-block,
 .form__program-block {
   padding: 0 0 23px;
-  margin: 20px 0 0;
 
   border: none;
   border-bottom: 1px solid #ededed;
+}
+
+.form__first-block {
+  margin: 17px 0 0;
+}
+
+.form__program-block {
+  margin: 27px 0 0;
 }
 
 .form__contact-block,
@@ -21,9 +28,18 @@
   border: none;
 }
 
+.form__comment-block {
+  margin: 28px 0 0;
+}
+
+.form__additionally-block {
+  padding-bottom: 40px;
+  margin: 26px 0 0;
+}
+
 .form__submit-wrapper {
   width: @mobile - (@mobile-padding * 2);
-  margin: 0 auto 20px;
+  margin: 0 auto 21px;
 }
 
 .form__footnote {
@@ -61,7 +77,7 @@
 }
 
 .form__program-li {
-  margin: 0 0 25px;
+  margin: 0 0 24px;
 
   &:last-child {
     margin-bottom: 0;
@@ -82,7 +98,7 @@
   width: auto;
   box-sizing: border-box;
   margin: 0;
-  padding: 12px 15px 13px;
+  padding: 13px 14px 12px;
 
   font-size: 16px;
   line-height: 18px;
@@ -98,7 +114,7 @@
   }
 
   &:focus {
-    padding: 11px 14px 12px;
+    padding: 12px 13px 11px;
 
     border: 2px solid #444444;
   }
@@ -167,11 +183,15 @@
   position: relative;
 
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 0 33px;
 
   background-image:
     linear-gradient(to right, #fff 0, #fff 33%, transparent 33%, transparent 100%),
     linear-gradient(to bottom, transparent 0, transparent 14px, @main-color 14px, @main-color 17px, transparent 17px, transparent 100%);
+}
+
+.form__legend-wrapper--additionally {
+  margin-bottom: 40px;
 }
 
 .form__legend {
@@ -207,14 +227,14 @@
 
 .form__contact-icon {
   position: absolute;
-  right: 20px;
+  right: 16px;
 
   display: block;
 }
 
 .form__contact-icon--phone {
   top: 12px;
-  right: 17px;
+  right: 13px;
 
   width: 20px;
 }
@@ -252,13 +272,12 @@
   display: flex;
   flex-direction: column;
   width: @mobile - (@mobile-padding * 2);
-  padding-bottom: 40px;
   margin: 0 auto;
 }
 
 .form__additionally-li {
   align-self: flex-start;
-  margin: 0 0 25px;
+  margin: 0 0 23px;
 
   &:last-child {
     margin-bottom: 0;
