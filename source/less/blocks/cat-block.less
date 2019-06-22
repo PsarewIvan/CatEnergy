@@ -95,8 +95,13 @@
 }
 
 @media (min-width: @tablet) {
+  .cat-block {
+    display: flex;
+    flex-direction: column;
+  }
+
   .cat-block__headline {
-    margin: 0 0 20px;
+    margin: 0 0 23px;
 
     font-size: 36px;
 
@@ -120,18 +125,22 @@
   }
 
   .cat-block__headline--strong::after {
-    right: 30px;
+    right: 27px;
 
-    width: 268px;
+    width: 269px;
+
+    background-size: 269px;
   }
 
   .cat-block__descr {
-    margin: 0 0 40px;
+    margin: 0 0 36px;
 
     font-size: 16px;
     line-height: 24px;
   }
   .cat-block__link {
+    margin-top: auto;
+
     font-size: 20px;
     line-height: 20px;
 
