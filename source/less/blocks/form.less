@@ -129,6 +129,8 @@
   font-family: @oswald;
   text-transform: uppercase;
   color: @font-form;
+
+  cursor: pointer;
 }
 
 .form__label--program {
@@ -336,10 +338,22 @@
   .form__program-block,
   .form__comment-block,
   .form__additionally-block {
-    margin: 0 0 70px;
+    margin: 0 0 72px;
     padding: 0;
 
     border: none;
+  }
+
+  .form__program-block {
+    margin-bottom: 75px;
+  }
+
+  .form__comment-block {
+    margin-bottom: 61px;
+  }
+
+  .form__additionally-block {
+    margin-bottom: 12px;
   }
 
   .form__first-block-list,
@@ -366,6 +380,10 @@
   .form__input {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .form__label {
+    margin-right: 17px;
   }
 
   .form__input {
@@ -405,7 +423,7 @@
   }
 
   .form__contact-block {
-    margin: 0 0 70px;
+    margin: 0 0 66px;
   }
 
   .form__contact-icon--email {
@@ -419,7 +437,11 @@
   .form__legend-wrapper {
     margin-bottom: 75px;
 
-    background-image: linear-gradient(to bottom, transparent 0, transparent 16px, @main-color 16px, @main-color 19px, transparent 19px, transparent 100%);
+    background-image: linear-gradient(to bottom, transparent 0, transparent 20px, @main-color 20px, @main-color 23px, transparent 23px, transparent 100%);
+
+    &--additionally {
+      margin-bottom: 65px;
+    }
   }
 
   .form__legend {
