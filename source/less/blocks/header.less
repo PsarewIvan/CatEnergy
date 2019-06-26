@@ -74,10 +74,10 @@
     margin: 0 auto 35px;
 
     border: none;
-  }
 
-  .header:not(.header--index) {
-    margin-bottom: 57px;
+    &:not(.header--index) {
+      margin-bottom: 57px;
+    }
   }
 
   .header__wrapper {
@@ -112,14 +112,17 @@
 @media (min-width: @desktop) {
   .header {
     width: @desktop - (@desktop-padding *2);
-    margin: 0 auto;
+    margin: 31px 0 0 0;
+
+    &:not(.header--index) {
+      margin: 30px auto 75px;
+    }
   }
 
   .header--index {
     position: absolute;
 
     width: @desktop - (@desktop-padding *2);
-    margin: 0;
     margin-left: 50%;
     transform: translateX(-50%);
 
@@ -128,9 +131,6 @@
 
   .header__logo-text {
     width: 120px;
-  }
-
-  .header:not(.header--index) {
-    margin-bottom: 75px;
+    margin-left: 79px;
   }
 }
