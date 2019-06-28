@@ -24,8 +24,8 @@ if (document.querySelector('#ymap')) {
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/picture/map-pin.png',
-        iconImageSize: [124, 106],
-        iconImageOffset: [-30, -51]
+        iconImageSize: [120, 102],
+        iconImageOffset: [-60, -102]
       });
       
       myMap.geoObjects.add(placemark);
