@@ -7,7 +7,9 @@ if (document.querySelector('.js-example__switch')) {
   const imgHide = 'example__picture--hide';
 
   if (matchMedia) {
-    let mqExample = window.matchMedia( '(max-width: 768px)' );
+    // let mqExample = window.matchMedia( '(max-width: 768px)' );
+    // временно, пока нереализую слайдер
+    let mqExample = window.matchMedia( '(max-width: 5000px)' );
     mqExample.addListener(WidthChangeExample);
     WidthChangeExample(mqExample);
   }
