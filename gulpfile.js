@@ -82,7 +82,7 @@ function styles() {
                 cascade: false
               }))
               .pipe(cleanCSS({level: 2}))
-              .pipe(rename({suffix: "-min"}))
+              .pipe(rename({suffix: '-min'}))
               // .pipe(sourcemaps.write())
               .pipe(gulp.dest(path.build.style))
               .pipe(browserSync.stream());
@@ -148,7 +148,7 @@ function createSvgSprite() {
               .pipe(svgSprite({
                 mode: {
                   symbol: {
-                    sprite: "../sprite.svg"
+                    sprite: '../sprite.svg'
                   }
                 }
               }))
@@ -184,15 +184,18 @@ gulp.task('webpConvert', webpConvert);
 gulp.task('watch', watch);
 
 gulp.task('buildImg', gulp.series(cleanImg,
-                        gulp.parallel('images', 'svgMin', 'webpConvert')
+                      gulp.parallel('images', 'svgMin', 'webpConvert')
                       ));
 
 gulp.task('buildNoImg', gulp.series(clean,
-                      gulp.parallel('html', 'styles', 'fonts', 'scripts')
+                        gulp.parallel('html', 'styles', 'fonts', 'scripts')
                     ));
 
+gulp.task('build', gulp.series(clean, cleanImg,
+                    gulp.parallel('html', 'styles', 'fonts', 'scripts', 'images', 'webpConvert')));
+
 gulp.task('dev', gulp.series(clean, cleanImg,
-                    gulp.parallel('html', 'styles', 'fonts', 'scripts', 'images', 'webpConvert'),
+                  gulp.parallel('html', 'styles', 'fonts', 'scripts', 'images', 'webpConvert'),
                     watch));
 
 ghpages.publish('build');

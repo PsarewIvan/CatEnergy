@@ -1,15 +1,15 @@
 if (document.querySelector('#ymap')) {
   window.onload = function() {
     ymaps.ready(function () {
-      let myMap = new ymaps.Map("ymap", {
+      let myMap = new ymaps.Map('ymap', {
         center: [59.938631, 30.3230554],
         zoom: 17
       });
   
       let placemark = new ymaps.Placemark([59.938631, 30.3230554], {
-        balloonContentHeader: "Cat Energy",
-        balloonContentBody: "ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург",
-        hintContent: "Мы находимся здесь"
+        balloonContentHeader: 'Cat Energy',
+        balloonContentBody: 'ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург',
+        hintContent: 'Мы находимся здесь'
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/picture/map-pin.png',
@@ -18,9 +18,9 @@ if (document.querySelector('#ymap')) {
       });
 
       let placemarkBig = new ymaps.Placemark([59.938631, 30.3230554], {
-        balloonContentHeader: "Cat Energy",
-        balloonContentBody: "ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург",
-        hintContent: "Мы находимся здесь"
+        balloonContentHeader: 'Cat Energy',
+        balloonContentBody: 'ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург',
+        hintContent: 'Мы находимся здесь'
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/picture/map-pin.png',
