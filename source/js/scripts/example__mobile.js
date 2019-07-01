@@ -4,7 +4,7 @@ if (document.querySelector('.js-example__switch')) {
   const exampleToggle = document.querySelector('.js-example__switch');
   const imgAfter = document.querySelector('.js-example__picture--after');
   const imgBefore = document.querySelector('.js-example__picture--before');
-  const imgHide = 'example__picture--hide';
+  const imgHide = 'example__picture-hide';
 
   if (matchMedia) {
     // let mqExample = window.matchMedia( '(max-width: 768px)' );
