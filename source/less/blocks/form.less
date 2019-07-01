@@ -338,6 +338,22 @@
   border: 2px solid @error;
 }
 
+.form__input--error svg {
+  fill: @main-color;
+}
+
+.form__input--weight,
+.form__input--age {
+  -moz-appearance:textfield;
+}
+
+.form__input--weight::-webkit-inner-spin-button,
+.form__input--weight::-webkit-outer-spin-button,
+.form__input--age::-webkit-inner-spin-button,
+.form__input--age::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 @media (min-width: @tablet) {
   .form__first-block,
   .form__program-block,
@@ -395,7 +411,7 @@
     padding: 11px 15px 12px;
 
     &:focus {
-      padding: 10px 13px 11px;
+      padding: 10px 14px 11px;
   
       border: 2px solid #444444;
     }
@@ -531,6 +547,10 @@
 
   .form__input {
     padding: 11px 19px 12px;
+
+    &:focus {
+      padding: 10px 18px 11px;
+    }
   }
 
   .form__label--weight {

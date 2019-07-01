@@ -68,10 +68,10 @@
   text-align: center;
   text-transform: uppercase;
   color: @font-headlines;
+}
 
-  & br {
-    display: none;
-  }
+.example__price-block br {
+  display: none;
 }
 
 .example__img-wrapper {
@@ -217,10 +217,6 @@
     line-height: 14px;
 
     background-color: #fff;
-
-    & br {
-      display: none;
-    }
   }
 
   .example__price-block {
@@ -229,10 +225,11 @@
     font-size: 20px;
     line-height: 28px;
     text-align: right;
+  }
 
-    & br {
-      display: block;
-    }
+  .example__numbers-footnote br,
+  .example__price-block br {
+    display: none;
   }
 
   .example__img-wrapper {
