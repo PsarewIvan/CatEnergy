@@ -30,12 +30,17 @@
 @media (min-width: @desktop) {
   .categories {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .categories__block {
     width: 570px;
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 0 72px;
+
+    &:last-child {
+      margin-bottom: 72px;
+    }
   }
 }

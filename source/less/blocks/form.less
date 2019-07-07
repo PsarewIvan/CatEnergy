@@ -501,6 +501,10 @@
   .form__additionally-li {
     width: 284px;
     margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
   }
 
   .form__label--additionally {
@@ -579,14 +583,19 @@
 
   .form__contact-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     width: @desktop - (@desktop-padding * 2);
     padding: 0;
   }
 
   .form__contact-li {
     width: 570px;
-    margin: 0;
+    margin: 0 80px 20px 0;
+
+    &:nth-of-type(2n) {
+      margin: 0 0 20px 0;
+    }
   }
 
   .form__contact-icon--phone,
@@ -595,7 +604,7 @@
   }
 
   .form__contact-block {
-    margin-bottom: 68px;
+    margin-bottom: 48px;
   }
 
   .form__comment-block {
