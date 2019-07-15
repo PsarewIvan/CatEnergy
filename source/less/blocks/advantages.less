@@ -84,6 +84,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    counter-reset: advantages-list;
   }
 
   .advantages__li:last-child {
@@ -115,6 +117,8 @@
     }
 
     &:after {
+      counter-increment: advantages-list;
+      content: counter(advantages-list);
       position: absolute;
       top: 0;
       left: 110px;
@@ -126,22 +130,6 @@
 
       z-index: -1;
     }
-  }
-
-  .advantages__descr--first::after {
-    content: "1";
-  }
-
-  .advantages__descr--second::after {
-    content: "2";
-  }
-
-  .advantages__descr--third::after {
-    content: "3";
-  }
-
-  .advantages__descr--fourth::after {
-    content: "4";
   }
 }
 
